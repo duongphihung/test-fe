@@ -76,7 +76,7 @@ export default function DiscountPage() {
                                 Online store dashboard
                             </Text>
                         </InlineStack>
-                        <Button size="large" variant="primary" tone="success">
+                        <Button size="large" variant="primary" tone="success" onClick={methods.handleSubmit(onSubmit)}>
                             Save
                         </Button>
                     </div>
