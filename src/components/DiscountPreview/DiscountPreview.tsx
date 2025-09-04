@@ -8,7 +8,7 @@ interface DiscountPreviewProps {
 }
 const DiscountPreview = ({
     title,
-    description ,
+    description,
     options
 }: DiscountPreviewProps) => {
     const getDiscountTypeDisplay = (type: PreviewOption['discountType']): string => {
@@ -51,12 +51,16 @@ const DiscountPreview = ({
                     </Text>
                 </BlockStack>
 
-                <div style={{
-                    border: '1px solid #e1e3e5',
-                    borderRadius: '6px',
-                    overflow: 'hidden'
-                }}>
-                    <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                <div
+                    style={{
+                        border: '1px solid #e1e3e5',
+                        borderRadius: '6px',
+                        overflow: 'auto', 
+                        maxHeight: '300px', 
+                        maxWidth: '100%',   
+                    }}
+                >
+                    <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '400px' }}>
                         <thead>
                             <tr>
                                 <th style={tableHeaderStyle}>Title</th>
@@ -77,6 +81,7 @@ const DiscountPreview = ({
                         </tbody>
                     </table>
                 </div>
+
             </BlockStack>
         </Card>
     );
@@ -85,17 +90,17 @@ const DiscountPreview = ({
 export default DiscountPreview
 
 const tableHeaderStyle: React.CSSProperties = {
-        padding: '12px 16px',
-        borderBottom: '1px solid #e1e3e5',
-        backgroundColor: '#f6f6f7',
-        fontWeight: 600,
-        color: '#616161',
-        fontSize: '14px'
-    };
+    padding: '12px 16px',
+    borderBottom: '1px solid #e1e3e5',
+    backgroundColor: '#f6f6f7',
+    fontWeight: 600,
+    color: '#616161',
+    fontSize: '14px'
+};
 
-    const tableCellStyle: React.CSSProperties = {
-        padding: '12px 16px',
-        borderBottom: '1px solid #e1e3e5',
-        fontSize: '14px',
-        color: '#303030'
-    };
+const tableCellStyle: React.CSSProperties = {
+    padding: '12px 16px',
+    borderBottom: '1px solid #e1e3e5',
+    fontSize: '14px',
+    color: '#303030'
+};
