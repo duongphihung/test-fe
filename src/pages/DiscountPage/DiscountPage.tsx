@@ -60,9 +60,9 @@ export default function DiscountPage() {
     };
 
     return (
-        <FormProvider {...methods}>
-            <form onSubmit={methods.handleSubmit(onSubmit)}>
-                <Page>
+        <Page>
+            <FormProvider {...methods}>
+                <form onSubmit={methods.handleSubmit(onSubmit)}>
                     <div
                         style={{
                             display: "flex",
@@ -97,8 +97,8 @@ export default function DiscountPage() {
                             />
                         </Grid.Cell>
                     </Grid>
-                </Page>
-            </form>
-        </FormProvider >
+                </form >
+            </FormProvider >
+        </Page >
     );
 }
